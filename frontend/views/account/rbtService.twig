@@ -1,0 +1,42 @@
+{% extends "@app/views/page/_basePage.twig" %}
+{% block main_content %}
+    {% include "@app/views/components/message.twig" %}
+    <div class="row">
+        <div class="mdl-4">
+            <h3 class="title">Dịch vụ nhạc chờ</h3>
+            {% if not isRegister %}
+                <div class="item-vip">
+                    <form action="rbt-service" id="rbt-service-form" method="POST">
+                        <p>{{ "Thay đổi tiếng ‘tút tút’ đơn điệu khi chờ máy bằng các giai điệu bạn và người thân yêu thích. Cước thuê bao: 9000đ /tháng cho di động và 6000đ/tháng cho Homephone." }}</p>
+                        <p>
+                            <input type="hidden" value="register" id="action"/>
+                            <div style="text-align:center">
+                                <button onclick="confirmRegisterCrbt('{{ "Quý khách có chắc chắn muốn đăng ký dịch vụ nhạc chờ?" }}', '{{ user.id }}')" type="button" class="btn btn-success" data-target="#confirm-reg-rbt" data-toggle="modal">Đăng ký</button>
+                                {#<button onclick="registerCrbt('{{ user.id }}')" type="button" class="btn btn-success">Đăng ký</button>#}
+                            </div>
+                        </p>
+                        <input type="hidden" name="{{ csrfParam }}" value="{{ csrfToken }}"/>
+                    </form>
+                </div>
+            {% else  %}
+                <div class="item-vip">
+                    <form action="rbt-service" id="rbt-service-form" method="POST">
+                        <p>{{ "Thay đổi tiếng ‘tút tút’ đơn điệu khi chờ máy bằng các giai điệu bạn và người thân yêu thích. Cước thuê bao: 9000đ /tháng cho di động và 6000đ/tháng cho Homephone." }}</p>
+                        <p>
+                            <input type="hidden" value="unregister" id="action"/>
+                            <div style="text-align:center">
+                                <button onclick="confirmRegisterCrbt('{{ "Sau khi huỷ dịch vụ 3 ngày, bộ sưu tập nhạc chờ của Quý khách sẽ bị xoá. Bấm nút ĐỒNG Ý để chắc chắn hủy dịch vụ." }}', '{{ user.id }}')" type="button" class="btn btn-danger" data-target="#confirm-reg-rbt" data-toggle="modal">Hủy Đăng ký</button>
+                                {#<button onclick="registerCrbt('{{ user.id }}')" type="button" class="btn btn-danger">Hủy Đăng ký</button>#}
+                            </div>
+                        </p>
+                        <input type="hidden" name="{{ csrfParam }}" value="{{ csrfToken }}"/>
+                    </form>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <script type="text/javascript">
+        dataTypeTopMenu = 'rbt';
+        currentPagePjax = pjaxPageEnum.userPage;
+    </script>
+{% endblock %}

@@ -1,0 +1,129 @@
+input-date/* CSS Document */
+a, input, button, a:focus, input:focus, button:focus {
+    outline: none !important;
+}
+
+.menu-left .anchor-change-2 li:last-child, .menu-left .anchor-change-3 li:last-child {
+    padding-bottom: 0;
+}
+
+.scroll-disable {
+    overflow: hidden;
+}
+
+span.btn-function {
+    cursor: pointer;
+}
+#loginform-captcha-image {
+    position: relative;
+    top: -7px;
+    width: 100px;
+    height: 47px;
+}
+.alert-danger, .alert-success {
+    margin-top: 10px;
+}
+
+@media (min-width:769px) {    
+    .mdl-form .ipt-imuzik {
+        width: 330px;
+    }
+}
+
+@media (max-width:769px) {
+    .hide-pagging {
+        display: none;
+    }
+
+    .mdl-form .ipt-imuzik {
+        width: 180px !important;
+        display: inline-block;
+        margin-right: 7px;
+    }
+    .setting-mobile{
+        display: block;
+        padding: 5px;
+    }
+
+    #vtmessages-captcha {
+        width: 70px;
+    }
+
+    .checkbox input[type="checkbox"] {
+        margin-left: -20px !important;
+    }
+    .fb-like {
+        top: -6px;
+    }
+}
+
+.input-date input {
+    display: inline-block;
+    vertical-align: middle;
+    width: 140px;
+}
+
+.input-date .short {
+    width: 80px !important;
+    display: inline-block;
+}
+
+.group-form-delete {
+    display: inline-block;
+}
+.button-error {
+    background-color: red;
+    border: none;
+}
+.modal-login .form-group{
+    margin-bottom: 5px;
+}
+.table .bg-color-01 .icon-pause2 {
+    margin-top: 6px;
+}
+.mdl-form .sub-title {
+    margin-top: 20px;
+}
+
+.modal-login .form-control {
+    background-color: #f7f7f7;
+    border-color: #dbdbdb;
+    border-radius: 20px;
+    box-shadow: none;
+    color: #323232;
+}
+
+#vtmessages-captcha {
+    width: 100px;
+}
+
+#vtmessages-captcha-image {
+    height: 50px;
+    margin-top: -7px;
+}
+
+.text-style-3{
+    display: inline-block;
+    padding-top: 17px;
+}
+
+.mdl-billboard {
+    overflow: hidden;
+}
+.avatar-loading {
+    margin-top: 18px !important;
+    margin-left: 13px !important;
+    font-size:40px !important;
+}
+.rbt-table .jscroll-added {
+    border-bottom: none;
+}
+.rbt-table .table {
+    margin-bottom: 0;
+}
+.rbt-table .jscroll-added .table>tbody+tbody {
+    border-top: none;
+}
+.rbt-table .jscroll-added .table tr.first-item>td {
+    border-top: none;
+}
